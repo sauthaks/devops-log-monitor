@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  log-monitor:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ./logs:/logs
+    container_name: log-monitor

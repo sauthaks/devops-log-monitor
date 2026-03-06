@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: log-monitor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: log-monitor
+  template:
+    metadata:
+      labels:
+        app: log-monitor
+    spec:
+      containers:
+      - name: log-monitor
+        image: devops-lab-log-monitor:latest
+        imagePullPolicy: Never
+        volumeMounts:
+        - name: logs
+          mountPath: /logs
+      volumes:
+      - name: logs
+        hostPath:
+          path: /Users/saurabhthakur/devops-lab/logs
