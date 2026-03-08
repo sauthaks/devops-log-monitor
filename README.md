@@ -49,3 +49,4 @@ Start the monitoring container:
 # CI pipeline test
 # retry CI
 # retry CI
+# fix docker auth
