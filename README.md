@@ -47,3 +47,4 @@ ALERT: ERROR Payment gateway failed
 Start the monitoring container:
 # CI test
 # CI pipeline test
+# retry CI
